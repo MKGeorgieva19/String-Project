@@ -20,9 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hangman.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="menuAndOptions.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -30,6 +27,15 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="playerGameChoice.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="randomize.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangManStructure.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangManGame.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

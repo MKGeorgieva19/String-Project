@@ -3,10 +3,13 @@
 #include <string>
 #include <stdlib.h>
 #include <time.h>
-#include "hangman.h"
+#include "hangManGame.h"
 #include "menuAndOptions.h"
 #include "playerGameChoice.h"
 #include "hangmanMenuAndOptions.h"
+#include "randomize.h"
+#include "hangManStructure.h"
+
 
 using namespace std;
 
@@ -153,7 +156,7 @@ void hangManStructure(int counter) {
     }
 }
 
-void hangMan() {
+void hangManGame() {
     string wordBank[] = { "apple", "banana", "circle", "notebook" };
     string word = randomize(wordBank), holder = word;
     char playerChoice;
@@ -260,7 +263,7 @@ void hangmanMenuAndOptions()
 
     if (a == '1') {
         system("cls");
-        hangMan();
+        hangManGame();
     }
     else if (a == '2') {
 
