@@ -20,16 +20,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hangman-structure.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="hangman.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="menuAndOptions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangmanMenuAndOptions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playerGameChoice.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
