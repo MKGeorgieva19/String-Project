@@ -1,9 +1,9 @@
-<img src="https://media.discordapp.net/attachments/783759564809437291/808350209288437821/nz.jpg" align="center" width="1000">
+<img src="https://media.discordapp.net/attachments/711269244985147493/809036318829969408/venom_copy.png" align="center" width="1000">
 <br>
 <hr>
 
 <br>
-<img src="https://media.discordapp.net/attachments/711269244985147493/808344685550632960/Participants-Logo.jpg" align="right" width="400">
+<img src="https://media.discordapp.net/attachments/711269244985147493/809037756839755776/unknown.png" align="right" width="400">
 <ul>
   <li><a href="https://github.com/MKGeorgieva19">Miriam Georgieva</a> - Scrum Trainer</li>
   <li><a href="https://github.com/MVMartinov19">Martin Martinov</a> - Quality Engineer</li>
@@ -14,6 +14,6 @@
 <br>
 <hr>
 <br>
-<img src="https://media.discordapp.net/attachments/711269244985147493/808341208035754014/Project-logo.jpg" align="left">
+<img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/147865546_273204797567841_8678218911099267045_n.png?_nc_cat=104&ccb=2&_nc_sid=58c789&_nc_ohc=s2RTmtAmAtsAX_8ZbgJ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=fddd2aba2cb253424129812991d3395a&oe=60490F39" align="left">
   <p align="right">For this project, we decided to make two games. First game is like Type Racer and the second game is Hangman. Our code is written in C++.</p>
 
