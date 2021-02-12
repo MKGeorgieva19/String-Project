@@ -148,6 +148,7 @@
     <ClInclude Include="menuAndOptions.h" />
     <ClInclude Include="playerGameChoice.h" />
     <ClInclude Include="randomize.h" />
+    <ClInclude Include="typeRacerMenuAndOptions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
