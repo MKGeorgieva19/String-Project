@@ -23,7 +23,7 @@ void hangManStructure(int counter) {
     if (counter == 1)
     {
         //1
-        cout << "|\n";
+        cout << "\n|\n";
         cout << "|\n";
         cout << "|\n";
         cout << "|\n";
@@ -165,14 +165,14 @@ void hangManGame() {
     for (size_t i = 1; i < word.size() - 1; i++) {
         holder[i] = '_';
     }
-    cout << endl;
+    cout << "\n\n\n\n\n\n\n\n\n\n";
     for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
     cout << endl;
     int mistake = 0;
-    while ((flag + 2) != word.size()) {
+    do {
         cin >> playerChoice;
         system("cls");
-        hangManStructure(mistake);
+
         if ((playerChoice >= 'a' && playerChoice <= 'z') || (playerChoice >= 'A' && playerChoice <= 'Z')) {
             int counter = 0;
             for (size_t i = 1; i < word.size() - 1; i++) {
@@ -180,19 +180,20 @@ void hangManGame() {
                     holder[i] = word[i];
                     flag++;
                 }
-                else  counter++;
+                else counter++;
             }
-            cout << endl;
             if (counter == word.size() - 2) mistake++;
+            if (mistake == 0) cout << "\n\n\n\n\n\n\n\n\n\n";
+            else hangManStructure(mistake);
             for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
         }
         else {
-            cout << endl;
+            hangManStructure(mistake);
             for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
             cout << "\n Invalid Move. Please Try Again.\n";
         }
         cout << endl;
-    }
+    } while ((flag + 2) != word.size() && mistake < 9);
 }
 
 void menuAndOptions()
@@ -397,5 +398,3 @@ int main()
     cin >> GameChoice;
     playerGameChoice(GameChoice);
 }
-
-
