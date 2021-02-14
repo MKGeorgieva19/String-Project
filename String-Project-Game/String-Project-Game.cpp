@@ -23,136 +23,161 @@ void hangManStructure(int counter) {
     if (counter == 1)
     {
         //1
-        cout << "\n|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
+        cout << "\n  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
     }
 
     else if (counter == 2)
     {
         //2
-        cout << setw(16) << " _______________\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
+        cout << setw(19) << " _______________\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
     }
 
     else if (counter == 3)
     {
         //3
-        cout << setw(16) << " _______________\n";
-        cout << "|" << setw(18) << " | \n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
+        cout << setw(19) << " _______________\n";
+        cout << "  |" << setw(18) << " | \n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
     }
 
     else if (counter == 4)
     {
         //4
-        cout << setw(16) << " _______________\n";
-        cout << "|" << setw(18) << " | \n";
-        cout << "|" << setw(18) << "( )\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
+        cout << setw(19) << " _______________\n";
+        cout << "  |" << setw(18) << " | \n";
+        cout << "  |" << setw(18) << "( )\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
     }
 
     else if (counter == 5)
     {
         //5
-        cout << setw(16) << " _______________\n";
-        cout << "|" << setw(18) << " | \n";
-        cout << "|" << setw(18) << "( )\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
+        cout << setw(19) << " _______________\n";
+        cout << "  |" << setw(18) << " | \n";
+        cout << "  |" << setw(18) << "( )\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
     }
 
     else if (counter == 6)
     {
         //6
-        cout << setw(16) << " _______________\n";
-        cout << "|" << setw(18) << " | \n";
-        cout << "|" << setw(18) << "( )\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(17) << "/|\n";
-        cout << "|" << setw(17) << "/ |\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
+        cout << setw(19) << " _______________\n";
+        cout << "  |" << setw(18) << " | \n";
+        cout << "  |" << setw(18) << "( )\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(17) << "/|\n";
+        cout << "  |" << setw(17) << "/ |\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
     }
 
     else if (counter == 7)
     {
         //7
-        cout << setw(16) << " _______________\n";
-        cout << "|" << setw(18) << " | \n";
-        cout << "|" << setw(18) << "( )\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(16) << "/|" << "\\" << "\n";
-        cout << "|" << setw(19) << "/ | \\\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|\n";
-        cout << "|\n";
-        cout << "|\n";
+        cout << setw(19) << " _______________\n";
+        cout << "  |" << setw(18) << " | \n";
+        cout << "  |" << setw(18) << "( )\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(16) << "/|" << "\\" << "\n";
+        cout << "  |" << setw(19) << "/ | \\\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |\n";
+        cout << "  |\n";
+        cout << "  |\n";
     }
 
 
     else if (counter == 8)
     {
         //8
-        cout << setw(16) << " _______________\n";
-        cout << "|" << setw(18) << " | \n";
-        cout << "|" << setw(18) << "( )\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(16) << "/|" << "\\" << "\n";
-        cout << "|" << setw(19) << "/ | \\\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(16) << "/\n";
-        cout << "|" << setw(15) << "/\n";
-        cout << "|\n";
+        cout << setw(19) << " _______________\n";
+        cout << "  |" << setw(18) << " | \n";
+        cout << "  |" << setw(18) << "( )\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(16) << "/|" << "\\" << "\n";
+        cout << "  |" << setw(19) << "/ | \\\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(16) << "/\n";
+        cout << "  |" << setw(15) << "/\n";
+        cout << "  |\n";
     }
 
     else if (counter == 9)
     {
         //9 - End (Game Over)
-        cout << setw(16) << " _______________\n";
-        cout << "|" << setw(18) << " | \n";
-        cout << "|" << setw(18) << "( )\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(16) << "/|" << "\\" << "\n";
-        cout << "|" << setw(19) << "/ | \\\n";
-        cout << "|" << setw(17) << "|\n";
-        cout << "|" << setw(15) << "/" << setw(2) << "\\" << "\n";
-        cout << "|" << setw(14) << "/" << setw(4) << "\\" << "\n";
-        cout << "|" << "\n";
+        cout << setw(19) << " _______________\n";
+        cout << "  |" << setw(18) << " | \n";
+        cout << "  |" << setw(18) << "( )\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(16) << "/|" << "\\" << "\n";
+        cout << "  |" << setw(19) << "/ | \\\n";
+        cout << "  |" << setw(17) << "|\n";
+        cout << "  |" << setw(15) << "/" << setw(2) << "\\" << "\n";
+        cout << "  |" << setw(14) << "/" << setw(4) << "\\" << "\n";
+        cout << "  |" << "\n";
+    }
+}
+
+void newGame() {
+    
+    cout << "\n\n\n                        W O U L D  Y O U  L I K E  T O  P L A Y  A N O T H E R  G A M E ?";
+    cout << "\n\n                                  (1) P R E S S  1  T O  P L A Y  A G A I N";
+    cout << "\n\n                                  (2) P R E S S  2  T O  R E T U R N  T O  T H E  M E N U";
+    cout << "\n\n                                  (3) P R E S S  3  T O  E N D  T H E  G A M E";
+    cout << endl;
+    int answer;
+    cin >> answer;
+    system("cls");
+    if (answer == 1) {
+        hangManGame();
+    }
+    else if (answer == 2) {
+        system("cls");
+        menuAndOptions();
+        int GameChoice;
+        cin >> GameChoice;
+        playerGameChoice(GameChoice);
+    }
+    else if (answer == 3) {
+        system("exit");
     }
 }
 
@@ -162,10 +187,11 @@ void hangManGame() {
     char playerChoice;
     int flag = 0;
 
+    
     for (size_t i = 1; i < word.size() - 1; i++) {
         holder[i] = '_';
     }
-    cout << "\n\n\n\n\n\n\n\n\n\n";
+    cout << "\n\n\n\n\n\n\n\n\n\n   ";
     for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
     cout << endl;
     int mistake = 0;
@@ -185,15 +211,26 @@ void hangManGame() {
             if (counter == word.size() - 2) mistake++;
             if (mistake == 0) cout << "\n\n\n\n\n\n\n\n\n\n";
             else hangManStructure(mistake);
+            cout << "   ";
             for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
         }
         else {
-            hangManStructure(mistake);
+            if (mistake == 0) cout << "\n\n\n\n\n\n\n\n\n\n";
+            else hangManStructure(mistake);
+            cout << "   ";
             for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
-            cout << "\n Invalid Move. Please Try Again.\n";
+            cout << "\n\n    Invalid Move. Please Try Again.\n";
         }
         cout << endl;
+
+
     } while ((flag + 2) != word.size() && mistake < 9);
+    for (size_t i = 0; i < word.size(); i++)
+    {
+        if (mistake < 9) cout << "\n    Congratulations, you win!";
+        else cout << "\n    Sorry, you lose! The word was " << word<<"."; break;
+    }     
+    newGame();
 }
 
 void menuAndOptions()
