@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8286491b-0eae-43d4-bdae-1801d8f9c92c}</ProjectGuid>
-    <RootNamespace>StringProjectGame</RootNamespace>
+    <ProjectGuid>{b677ce8b-6364-4039-a528-bd46c13ee643}</ProjectGuid>
+    <RootNamespace>StringGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,16 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="String-Project-Game.cpp" />
+    <ClCompile Include="String-Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hangManGame.h" />
     <ClInclude Include="hangmanMenuAndOptions.h" />
     <ClInclude Include="hangManStructure.h" />
     <ClInclude Include="menuAndOptions.h" />
+    <ClInclude Include="newGame.h" />
     <ClInclude Include="playerGameChoice.h" />
     <ClInclude Include="randomize.h" />
-    <ClInclude Include="typeRacerMenuAndOptions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

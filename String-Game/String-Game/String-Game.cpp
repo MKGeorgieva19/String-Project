@@ -3,13 +3,14 @@
 #include <string>
 #include <stdlib.h>
 #include <time.h>
-#include "hangManGame.h"
-#include "menuAndOptions.h"
-#include "playerGameChoice.h"
-#include "hangmanMenuAndOptions.h"
-#include "randomize.h"
+
 #include "hangManStructure.h"
-#include "typeRacerMenuAndOptions.h"
+#include "randomize.h"
+#include "hangManGame.h"
+#include "newGame.h"
+#include "menuAndOptions.h"
+#include "hangmanMenuAndOptions.h"
+#include "playerGameChoice.h"
 
 using namespace std;
 
@@ -20,144 +21,227 @@ string randomize(string words[])
 }
 
 void hangManStructure(int counter) {
+    cout << "\n\n\n\n\n";
+    cout << setw(150) << "        ///       ///    ///////////    //////     ///      /////////     /////          /////    ///////////   //////      ///\n";
+    cout << setw(149) << "       ///       ///    ///     ///    /// ///    ///   ////             /// ///      /// ///    ///     ///   /// ///     ///\n";
+    cout << setw(148) << "      ///       ///    ///     ///    ///  ///   ///  ///               ///  ///    ///  ///    ///     ///   ///   ///   ///\n";
+    cout << setw(147) << "     /////////////    ///////////    ///   ///  ///  ///      //////   ///   ///  ///   ///    ///////////   ///    ///  ///\n";
+    cout << setw(146) << "    ///       ///    ///     ///    ///    /// ///  ///         ///   ///    //////    ///    ///     ///   ///     /// ///\n";
+    cout << setw(146) << "   ///       ///    ///     ///    ///     //////    ////      ///   ///              ///    ///     ///   ///      ////// \n";
+    cout << setw(146) << "  ///       ///    ///     ///    ///      /////        /////////   ///              ///    ///     ///   ///       /////\n\n\n";
+    cout << setw(159) << "  ____________________________________________________________________________________________________________________________\n\n\n\n\n\n";
+
+
     if (counter == 1)
     {
-        //1
-        cout << "\n  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
+
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
     }
 
     else if (counter == 2)
     {
-        //2
-        cout << setw(19) << " _______________\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
+
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << setw(19) << " _______________\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
     }
 
     else if (counter == 3)
     {
-        //3
-        cout << setw(19) << " _______________\n";
-        cout << "  |" << setw(18) << " | \n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
+
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << setw(19) << " _______________\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << " | \n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
     }
 
     else if (counter == 4)
     {
+
         //4
-        cout << setw(19) << " _______________\n";
-        cout << "  |" << setw(18) << " | \n";
-        cout << "  |" << setw(18) << "( )\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << setw(19) << " _______________\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << " | \n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << "( )\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
     }
 
     else if (counter == 5)
     {
-        //5
-        cout << setw(19) << " _______________\n";
-        cout << "  |" << setw(18) << " | \n";
-        cout << "  |" << setw(18) << "( )\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << setw(19) << " _______________\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << " | \n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << "( )\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
     }
 
     else if (counter == 6)
     {
+
         //6
-        cout << setw(19) << " _______________\n";
-        cout << "  |" << setw(18) << " | \n";
-        cout << "  |" << setw(18) << "( )\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(17) << "/|\n";
-        cout << "  |" << setw(17) << "/ |\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << setw(19) << " _______________\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << " | \n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << "( )\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "/|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "/ |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
     }
 
     else if (counter == 7)
     {
+
         //7
-        cout << setw(19) << " _______________\n";
-        cout << "  |" << setw(18) << " | \n";
-        cout << "  |" << setw(18) << "( )\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(16) << "/|" << "\\" << "\n";
-        cout << "  |" << setw(19) << "/ | \\\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |\n";
-        cout << "  |\n";
-        cout << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << setw(19) << " _______________\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << " | \n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << "( )\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(16) << "/|" << "\\" << "\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(19) << "/ | \\\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
     }
 
 
     else if (counter == 8)
     {
+
         //8
-        cout << setw(19) << " _______________\n";
-        cout << "  |" << setw(18) << " | \n";
-        cout << "  |" << setw(18) << "( )\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(16) << "/|" << "\\" << "\n";
-        cout << "  |" << setw(19) << "/ | \\\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(16) << "/\n";
-        cout << "  |" << setw(15) << "/\n";
-        cout << "  |\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << setw(19) << " _______________\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << " | \n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << "( )\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(16) << "/|" << "\\" << "\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(19) << "/ | \\\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(16) << "/\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(15) << "/\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |\n";
     }
 
     else if (counter == 9)
     {
+
+
         //9 - End (Game Over)
-        cout << setw(19) << " _______________\n";
-        cout << "  |" << setw(18) << " | \n";
-        cout << "  |" << setw(18) << "( )\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(16) << "/|" << "\\" << "\n";
-        cout << "  |" << setw(19) << "/ | \\\n";
-        cout << "  |" << setw(17) << "|\n";
-        cout << "  |" << setw(15) << "/" << setw(2) << "\\" << "\n";
-        cout << "  |" << setw(14) << "/" << setw(4) << "\\" << "\n";
-        cout << "  |" << "\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << setw(19) << " _______________\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << " | \n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(18) << "( )\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(16) << "/|" << "\\" << "\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(19) << "/ | \\\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(17) << "|\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(15) << "/" << setw(2) << "\\" << "\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << setw(14) << "/" << setw(4) << "\\" << "\n";
+        cout << "\t\t\t\t\t\t\t\t\t\t\t\t" << "  |" << "\n";
     }
+}
+void hangManGame() {
+
+    cout << "\n\n\n\n\n";
+    cout << setw(150) << "        ///       ///    ///////////    //////     ///      /////////     /////          /////    ///////////   //////      ///\n";
+    cout << setw(149) << "       ///       ///    ///     ///    /// ///    ///   ////             /// ///      /// ///    ///     ///   /// ///     ///\n";
+    cout << setw(148) << "      ///       ///    ///     ///    ///  ///   ///  ///               ///  ///    ///  ///    ///     ///   ///   ///   ///\n";
+    cout << setw(147) << "     /////////////    ///////////    ///   ///  ///  ///      //////   ///   ///  ///   ///    ///////////   ///    ///  ///\n";
+    cout << setw(146) << "    ///       ///    ///     ///    ///    /// ///  ///         ///   ///    //////    ///    ///     ///   ///     /// ///\n";
+    cout << setw(146) << "   ///       ///    ///     ///    ///     //////    ////      ///   ///              ///    ///     ///   ///      ////// \n";
+    cout << setw(146) << "  ///       ///    ///     ///    ///      /////        /////////   ///              ///    ///     ///   ///       /////\n\n\n";
+    cout << setw(159) << "  ____________________________________________________________________________________________________________________________\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+    string wordBank[] = { "apple", "banana", "circle", "notebook" };
+    string word = randomize(wordBank), holder = word;
+    char playerChoice;
+    int flag = 0;
+
+   
+    for (size_t i = 1; i < word.size() - 1; i++) {
+        holder[i] = '_';
+    }
+    cout << "\t\t\t\t\t\t\t";
+    for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
+    cout << endl;
+    int mistake = 0;
+    do {
+        cin >> playerChoice;
+        system("cls");
+
+        if ((playerChoice >= 'a' && playerChoice <= 'z') || (playerChoice >= 'A' && playerChoice <= 'Z')) {
+            int counter = 0;
+            for (size_t i = 1; i < word.size() - 1; i++) {
+                if (word[i] == playerChoice && holder[i] == '_') {
+                    holder[i] = word[i];
+                    flag++;
+                }
+                else counter++;
+            }
+            if (counter == word.size() - 2) mistake++;
+            if (mistake == 0) cout << "\n\n\n\n\n\n\n\n\n\n";
+            else hangManStructure(mistake);
+            cout << "   ";
+            cout << "\t\t\t\t\t\t\t";
+            for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
+        }
+        else {
+            if (mistake == 0) cout << "\n\n\n\n\n\n\n\n\n\n";
+            else hangManStructure(mistake);
+            cout << "   ";
+            cout << "\t\t\t\t\t\t\t";
+            for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
+            cout << "\n\n    Invalid Move. Please Try Again.\n";
+        }
+        cout << endl;
+
+
+    } while ((flag + 2) != word.size() && mistake < 9);
+    
+    for (size_t i = 0; i < word.size(); i++)
+    {
+        if (mistake < 9) cout << "\n    Congratulations, you win!";
+        else cout << "\n    Sorry, you lose! The word was " << word << "."; break;
+    }
+   
+    newGame();
+   
+   
 }
 
 void newGame() {
-    
+
     cout << "\n\n\n                        W O U L D  Y O U  L I K E  T O  P L A Y  A N O T H E R  G A M E ?";
     cout << "\n\n                                  (1) P R E S S  1  T O  P L A Y  A G A I N";
     cout << "\n\n                                  (2) P R E S S  2  T O  R E T U R N  T O  T H E  M E N U";
@@ -181,57 +265,7 @@ void newGame() {
     }
 }
 
-void hangManGame() {
-    string wordBank[] = { "apple", "banana", "circle", "notebook" };
-    string word = randomize(wordBank), holder = word;
-    char playerChoice;
-    int flag = 0;
 
-    
-    for (size_t i = 1; i < word.size() - 1; i++) {
-        holder[i] = '_';
-    }
-    cout << "\n\n\n\n\n\n\n\n\n\n   ";
-    for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
-    cout << endl;
-    int mistake = 0;
-    do {
-        cin >> playerChoice;
-        system("cls");
-
-        if ((playerChoice >= 'a' && playerChoice <= 'z') || (playerChoice >= 'A' && playerChoice <= 'Z')) {
-            int counter = 0;
-            for (size_t i = 1; i < word.size() - 1; i++) {
-                if (word[i] == playerChoice && holder[i] == '_') {
-                    holder[i] = word[i];
-                    flag++;
-                }
-                else counter++;
-            }
-            if (counter == word.size() - 2) mistake++;
-            if (mistake == 0) cout << "\n\n\n\n\n\n\n\n\n\n";
-            else hangManStructure(mistake);
-            cout << "   ";
-            for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
-        }
-        else {
-            if (mistake == 0) cout << "\n\n\n\n\n\n\n\n\n\n";
-            else hangManStructure(mistake);
-            cout << "   ";
-            for (size_t i = 0; i < word.size(); i++) cout << " " << holder[i];
-            cout << "\n\n    Invalid Move. Please Try Again.\n";
-        }
-        cout << endl;
-
-
-    } while ((flag + 2) != word.size() && mistake < 9);
-    for (size_t i = 0; i < word.size(); i++)
-    {
-        if (mistake < 9) cout << "\n    Congratulations, you win!";
-        else cout << "\n    Sorry, you lose! The word was " << word<<"."; break;
-    }     
-    newGame();
-}
 
 void menuAndOptions()
 {
@@ -262,7 +296,7 @@ void menuAndOptions()
     cout << "               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  |      C  H  O  O  S  E   A N   O  P  T  I  O  N      |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|\n";
     cout << "               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  |                                                     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|\n";
     cout << "               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  |                                                     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|\n";
-    cout << "               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  |              (1) T Y P E   R A C E R                |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|\n";
+    cout << "               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  |              (1) G U E S S  T H E  W O R D          |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|\n";
     cout << "               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  |                                                     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|\n";
     cout << "               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  |                                                     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|\n";
     cout << "               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  |              (2) H A N G M A N                      |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|\n";
@@ -281,74 +315,12 @@ void menuAndOptions()
     cout << "               |____________________________________________________________________________________________________________________________________|\n";
 }
 
-void typeRacerMenuAndOptions()
-{
-    char choice;
-    cout << "\n\n\n";
-    cout << "\n              /////////////////   ///     ///     /////////////    ////////////        /////////////    ///////////      /////////     ////////////     /////////////\n";
-    cout << "                    ///          ///     ///     ///       ///    ///                 ///       ///    ///     ///    ////            ///              ///       ///\n";
-    cout << "                   ///          ///     ///     ///       ///    ///                 ///       ///    ///     ///   ///              ///              ///       ///\n";
-    cout << "                  ///          ///     ///     ///////////      ////////////        ///////////      ///////////   ///              ////////////     ///////////\n";
-    cout << "                 ///            /////////     ///              ///                 ///       ///    ///     ///   ///              ///              ///       ///\n";
-    cout << "                ///                  ///     ///              ///                 ///       ///    ///     ///    ////            ///              ///       ///\n";
-    cout << "               ///           //////////     ///              ////////////        ///       ///    ///     ///        /////////   ////////////     ///       ///\n\n\n";
 
-    cout << setw(160) << "__________________________________________________________________________________________________________________________________________________\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       * _____________________________________________________ *       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *|                                                     |*       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *   |      C  H  O  O  S  E   A N   O  P  T  I  O  N      |   * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       *|                                                     |*       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *|                                                     |*       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *   |              (1) P L A Y  G A M E                   |   * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       *|                                                     |*       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *|                                                     |*       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *   |              (2) H O W  T O  P L A Y                |   * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       *|                                                     |*       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *|                                                     |*       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *   |              (3) B A C K  T O  M E N U              |   * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       *|                                                     |*       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *|_____________________________________________________|*       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |   *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *       *      |\n";
-    cout << "            |*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * * |\n";
-    cout << "            |__________________________________________________________________________________________________________________________________________________|\n";
-
-
-    cin >> choice;
-
-    if (choice == '1') {
-        system("cls");
-        
-    }
-    else if (choice == '2') {
-
-    }
-    else if (choice == '3') {
-        system("cls");
-        menuAndOptions();
-        int GameChoice;
-        cin >> GameChoice;
-        playerGameChoice(GameChoice);
-    }
-    else cout << "Invalid Move. Please Try Again.\n";
-}
 
 void hangmanMenuAndOptions()
 {
     char a;
-    
+
 
     cout << "\n\n\n\n\n";
     cout << setw(150) << "        ///       ///    ///////////    //////     ///      /////////     /////          /////    ///////////   //////      ///\n";
@@ -404,23 +376,23 @@ void hangmanMenuAndOptions()
         system("cls");
         menuAndOptions();
         int GameChoice;
-    cin >> GameChoice;
-    playerGameChoice(GameChoice);
+        cin >> GameChoice;
+        playerGameChoice(GameChoice);
     }
     else cout << "Invalid Move. Please Try Again.\n";
 }
+
 void playerGameChoice(int GameChoice)
 {
-	if (GameChoice == 1)
-	{
-        system("cls");
-        typeRacerMenuAndOptions();
-	}
-	else if (GameChoice == 2)
-	{
+    if (GameChoice == 1)
+    {
+        cout << " ";
+    }
+    else if (GameChoice == 2)
+    {
         system("cls");
         hangmanMenuAndOptions();
-	}
+    }
     else if (GameChoice == 3)
     {
         cout << " ";
@@ -429,7 +401,7 @@ void playerGameChoice(int GameChoice)
 
 int main()
 {
-	menuAndOptions();
+    menuAndOptions();
 
     int GameChoice;
     cin >> GameChoice;

@@ -15,31 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="String-Project-Game.cpp">
+    <ClCompile Include="String-Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menuAndOptions.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hangmanMenuAndOptions.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="playerGameChoice.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="hangManStructure.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="randomize.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hangManStructure.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="hangManGame.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="typeRacerMenuAndOptions.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="newGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menuAndOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangmanMenuAndOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playerGameChoice.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,4 +4,4 @@
 #include<iomanip>
 using namespace std;
 
-void playerGameChoice(int GameChoice);
+void menuAndOptions();

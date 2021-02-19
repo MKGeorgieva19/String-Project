@@ -4,4 +4,5 @@
 #include<iomanip>
 using namespace std;
 
-void hangManStructure(int counter);
+
+void playerGameChoice(int GameChoice);

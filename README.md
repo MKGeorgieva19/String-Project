@@ -15,5 +15,5 @@
 <hr>
 <br>
 <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/147865546_273204797567841_8678218911099267045_n.png?_nc_cat=104&ccb=2&_nc_sid=58c789&_nc_ohc=s2RTmtAmAtsAX_8ZbgJ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=fddd2aba2cb253424129812991d3395a&oe=60490F39" align="left">
-  <p align="right">For this project, we decided to make two games. First game is like Type Racer and the second game is Hangman. Our code is written in C++.</p>
+  <p align="right">For this project, we decided to make two games. First game is "Guess the Word" and the second game is "Hangman". Our code is written in C++.</p>
 

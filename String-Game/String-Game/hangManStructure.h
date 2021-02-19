@@ -1,7 +1,6 @@
 #pragma once
-
 #include<iostream>
-#include<string>
+#include<iomanip>
 using namespace std;
 
-string randomize(string words[]);
+void hangManStructure(int counter);
