@@ -41,5 +41,11 @@
     <ClInclude Include="playerGameChoice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="guessTheWordMenuAndOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Win.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

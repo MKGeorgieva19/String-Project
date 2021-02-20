@@ -142,6 +142,7 @@
     <ClCompile Include="String-Game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="guessTheWordMenuAndOptions.h" />
     <ClInclude Include="hangManGame.h" />
     <ClInclude Include="hangmanMenuAndOptions.h" />
     <ClInclude Include="hangManStructure.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="newGame.h" />
     <ClInclude Include="playerGameChoice.h" />
     <ClInclude Include="randomize.h" />
+    <ClInclude Include="Win.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
