@@ -321,10 +321,6 @@ void Win()
     }
 }
 
-
-
-
-
 void menuAndOptions()
 {
     cout << "\n \n";
@@ -427,7 +423,7 @@ void guessTheWordMenuAndOptions()
         hangManGame();
     }
     else if (choice == '2') {
-
+        
     }
     else if (choice == '3') {
         system("cls");
@@ -437,7 +433,54 @@ void guessTheWordMenuAndOptions()
         playerGameChoice(GameChoice);
     }
     else cout << "Invalid Move. Please Try Again.\n";
+
 }
+
+void hangmanRules() {
+    system("cls");
+    cout << setw(135) << "       //////////////   ///        ///   ///          //////////   ////////// \n";
+    cout << setw(135) << "      ///        ///   ///        ///   ///          ///          ///         \n";
+    cout << setw(135) << "     ///        ///   ///        ///   ///          ///          ///          \n";
+    cout << setw(135) << "    ////////////     ///        ///   ///          //////////   //////////    \n";
+    cout << setw(135) << "   ///       ///    ///        ///   ///          ///                 ///     \n";
+    cout << setw(135) << "  ///       ///    ///        ///   ///          ///                 ///      \n";
+    cout << setw(135) << " ///       ///     ///////////     //////////   //////////   //////////       \n";
+    cout << "\n\n\n";
+    cout << "                                                      _________________________________________________________________________________\n";
+    cout << "                                                      |                                                                               |\n";
+    cout << "                                                      |  1) You need to enter a letter that might be in the word.                     |\n";
+    cout << "                                                      |  2) Whenever you guess a letter that is in the secret word,                   |\n";
+    cout << "                                                      |  the host fills it into the blank where it occurs.                            |\n";
+    cout << "                                                      |  For example, if the word is ZIPPER and the players guess E                   |\n";;
+    cout << "                                                      |  then the host will fill in the 5th blank with an E : ( _ _ _ _ e _ ).        |\n";
+    cout << "                                                      |  3) If the players guess a letter that repeats, fill in both letters.         |\n";
+    cout << "                                                      |  If they guess P you would have to fill in both Ps: ( _ _ p p e _ ).          |\n";
+    cout << "                                                      |  4) If you input a letter that is not in the secret word, a line from         |\n";
+    cout << "                                                      |  he hangman will appear. NOTE_1: This is counted as a mistake.                |\n";
+    cout << "                                                      |  5) You must not enter a number or a symbol, otherwise the console            |\n";
+    cout << "                                                      |  will display the message - Invalid move.Please try again - and you           |\n";
+    cout << "                                                      |  will have to enter a new letter.                                             |\n";
+    cout << "                                                      |  NOTE_2: This action will not count as a mistake.                             |\n";
+    cout << "                                                      |  6) If you guess the word for less than 9 moves, you win. Otherwise you lose. |\n";
+    cout << "                                                      |  7) Enjoy the game :)                                                         |\n";
+    cout << "                                                      |_______________________________________________________________________________|\n";
+
+    cout << "\n                                                   I F  Y O U  W A N T  T O  R E T U R N  T O  T H E  M A I N  M E N U  T Y P E  -R E T U R N-\n";
+    string returnVariable;
+    cin >> returnVariable;
+    if (returnVariable == "return" || returnVariable == "RETURN") {
+        system("cls");
+        menuAndOptions();
+        int GameChoice;
+        cin >> GameChoice;
+        playerGameChoice(GameChoice);
+    }
+    else {
+        cout << "Try again!";
+        hangmanRules();
+    }
+}
+
 void hangmanMenuAndOptions()
 {
     char choice;
@@ -491,7 +534,7 @@ void hangmanMenuAndOptions()
         hangManGame();
     }
     else if (choice == '2') {
-
+        hangmanRules();
     }
     else if (choice == '3') {
         system("cls");
