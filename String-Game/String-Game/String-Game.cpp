@@ -369,6 +369,171 @@ void menuAndOptions()
     cout << "               |____________________________________________________________________________________________________________________________________|\n";
 }
 
+void randomGive(string* w1, string* w2, string* w3, string* w4, string* w5, string bank[]) {
+    srand(time(NULL));
+    int a, b, c, d, e;
+    a = rand() % 10;
+    while (true) {
+        b = rand() % 10;
+        if (b != a) break;
+    }
+    while (true) {
+        c = rand() % 10;
+        if (c != a && c != b) break;
+    }
+    while (true) {
+        d = rand() % 10;
+        if (d != a && d != b && d != c) break;
+
+    }
+    while (true) {
+        e = rand() % 10;
+        if (e != a && e != b && e != c && e != d) break;
+    }
+    *w1 = bank[a];
+    *w2 = bank[b];
+    *w3 = bank[c];
+    *w4 = bank[d];
+    *w5 = bank[e];
+}
+
+string extract(string str) {
+    int index, temp;
+    string holder = str;
+    for (size_t i = 0; i < str.size(); i++) {
+        index = rand() % str.size();
+        temp = str[i];
+        str[i] = str[index];
+        str[index] = temp;
+    }
+    if (str == holder) extract(str);
+    return str;
+}
+
+void guessTheWord() {
+    string bank[] = { "apple", "juice", "banana", "bottle", "hard", "table", "chair", "close", "fox", "person" };
+    string word1, word2, word3, word4, word5;
+    string placer1, placer2, placer3, placer4, placer5;
+
+    randomGive(&word1, &word2, &word3, &word4, &word5, bank);
+
+    placer1 = word1;
+    placer2 = word2;
+    placer3 = word3;
+    placer4 = word4;
+    placer5 = word5;
+
+    string choice;
+
+    int counter = 0;
+
+    string a = extract(word1);
+    string b = extract(word2);
+    string c = extract(word3);
+    string d = extract(word4);
+    string e = extract(word5);
+
+    for (size_t i = 0; i < word1.size(); i++) cout << "_ ";
+    for (size_t i = 0; i < 20 - (word1.size()) * 2; i++) cout << " ";
+    for (size_t i = 0; i < word1.size(); i++) cout << a[i] << " ";
+    cout << endl << endl;
+
+    for (size_t i = 0; i < word2.size(); i++) cout << "_ ";
+    for (size_t i = 0; i < 20 - (word2.size()) * 2; i++) cout << " ";
+    for (size_t i = 0; i < word2.size(); i++) cout << b[i] << " ";
+    cout << endl << endl;
+
+    for (size_t i = 0; i < word3.size(); i++) cout << "_ ";
+    for (size_t i = 0; i < 20 - (word3.size()) * 2; i++) cout << " ";
+    for (size_t i = 0; i < word3.size(); i++) cout << c[i] << " ";
+    cout << endl << endl;
+
+    for (size_t i = 0; i < word4.size(); i++) cout << "_ ";
+    for (size_t i = 0; i < 20 - (word4.size()) * 2; i++) cout << " ";
+    for (size_t i = 0; i < word4.size(); i++) cout << d[i] << " ";
+    cout << endl << endl;
+
+    for (size_t i = 0; i < word5.size(); i++) cout << "_ ";
+    for (size_t i = 0; i < 20 - (word5.size()) * 2; i++) cout << " ";
+    for (size_t i = 0; i < word5.size(); i++) cout << e[i] << " ";
+    cout << endl << endl;
+
+    while (counter < 5) {
+        cin >> choice;
+        system("cls");
+
+        if (choice == word1 && placer1 != "0") {
+            counter++;
+            placer1 = "0";
+        }
+        else if (choice == word2 && placer2 != "0") {
+            counter++;
+            placer2 = "0";
+        }
+        else if (choice == word3 && placer3 != "0") {
+            counter++;
+            placer3 = "0";
+        }
+        else if (choice == word4 && placer4 != "0") {
+            counter++;
+            placer4 = "0";
+        }
+        else if (choice == word5 && placer5 != "0") {
+            counter++;
+            placer5 = "0";
+        }
+
+        if (placer1 == "0") for (size_t i = 0; i < word1.size(); i++) cout << word1[i] << " ";
+        else {
+            for (size_t i = 0; i < word1.size(); i++) cout << "_ ";
+            for (size_t i = 0; i < 20 - (word1.size()) * 2; i++) cout << " ";
+            for (size_t i = 0; i < word1.size(); i++) cout << a[i] << " ";
+        }
+        cout << endl << endl;
+
+        if (placer2 == "0") for (size_t i = 0; i < word2.size(); i++) cout << word2[i] << " ";
+        else {
+            for (size_t i = 0; i < word2.size(); i++) cout << "_ ";
+            for (size_t i = 0; i < 20 - (word2.size()) * 2; i++) cout << " ";
+            for (size_t i = 0; i < word2.size(); i++) cout << b[i] << " ";
+        }
+        cout << endl << endl;
+
+        if (placer3 == "0") for (size_t i = 0; i < word3.size(); i++) cout << word3[i] << " ";
+        else {
+            for (size_t i = 0; i < word3.size(); i++) cout << "_ ";
+            for (size_t i = 0; i < 20 - (word3.size()) * 2; i++) cout << " ";
+            for (size_t i = 0; i < word3.size(); i++) cout << c[i] << " ";
+        }
+        cout << endl << endl;
+
+        if (placer4 == "0") for (size_t i = 0; i < word4.size(); i++) cout << word4[i] << " ";
+        else {
+            for (size_t i = 0; i < word4.size(); i++) cout << "_ ";
+            for (size_t i = 0; i < 20 - (word4.size()) * 2; i++) cout << " ";
+            for (size_t i = 0; i < word4.size(); i++) cout << d[i] << " ";
+        }
+        cout << endl << endl;
+
+        if (placer5 == "0") for (size_t i = 0; i < word5.size(); i++) cout << word5[i] << " ";
+        else {
+            for (size_t i = 0; i < word5.size(); i++) cout << "_ ";
+            for (size_t i = 0; i < 20 - (word5.size()) * 2; i++) cout << " ";
+            for (size_t i = 0; i < word5.size(); i++) cout << e[i] << " ";
+        }
+        cout << endl << endl;
+
+        if (counter == 5) {
+            cout << "CONGRATULATIONS YOU WON!!!" << endl;
+            cout << "[1] Play again [2] Menu" << endl;
+            cout << "Your next option here: ";
+            cin >> choice;
+            system("cls");
+            if (choice == "1") guessTheWord();
+            else if (choice == "2") guessTheWordMenuAndOptions();
+        }
+    }
+}
 
 void guessTheWordMenuAndOptions()
 {
@@ -420,7 +585,7 @@ void guessTheWordMenuAndOptions()
     cin >> choice;
     if (choice == '1') {
         system("cls");
-        hangManGame();
+        guessTheWord();
     }
     else if (choice == '2') {
         
@@ -480,6 +645,10 @@ void hangmanRules() {
         hangmanRules();
     }
 }
+
+
+
+
 
 void hangmanMenuAndOptions()
 {
