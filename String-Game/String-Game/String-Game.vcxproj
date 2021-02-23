@@ -142,6 +142,7 @@
     <ClCompile Include="String-Game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="gameOver.h" />
     <ClInclude Include="guessTheWordMenuAndOptions.h" />
     <ClInclude Include="hangManGame.h" />
     <ClInclude Include="hangmanMenuAndOptions.h" />
