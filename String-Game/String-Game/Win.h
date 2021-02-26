@@ -5,4 +5,4 @@
 
 using namespace std;
 
-void Win();
+void winMenu();
