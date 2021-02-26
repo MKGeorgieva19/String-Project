@@ -18,6 +18,7 @@
   <p align="right">For this project, we decided to make two games. First game is "Guess the Word" and the second game is "Hangman". Our code is written in C++.</p>
  <br>
  <hr>
+ <br>
 <img src = "https://media.discordapp.net/attachments/722478446311112775/814900898983313438/interfacefinal.png?width=960&height=131" align="center">  <hr>
 <h1 align="center">Main Menu</h1>
 <p align="left">
@@ -33,7 +34,7 @@
     <i><li>When you choose the third option, you will just quit the menu</li></i>
   </ol>
 </p>
- <br><br><br><br>
+ <br>
  <hr>
  <h1 align="center">Games' Menus</h1>
  <img src = "https://media.discordapp.net/attachments/722478446311112775/814904248508350524/gamesmenu.gif" align = "left" width = "450"> 
@@ -49,9 +50,10 @@
         <i><li>When you choose the third option, you will return to the Main Menu</li></i>
   </ol>
 <p>
- <br><br><br>
+ <br>
   <hr>
  <h1 align="center">Hangman Structure</h1>
+ <br>
  <img src = "https://media.discordapp.net/attachments/722478446311112775/814877712710762536/hangman.gif" align = "right" width = "300"> 
  <p align="left">
   <br>
