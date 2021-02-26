@@ -21,8 +21,8 @@
  <br>
 <img src = "https://media.discordapp.net/attachments/722478446311112775/814900898983313438/interfacefinal.png?width=960&height=131" align="center">  <hr>
 <h1 align="center">Main Menu</h1>
-<p align="left">
-  <img src = "https://media.discordapp.net/attachments/813407313541070891/814879016648572938/Screenshot_19.png?width=1077&height=676" align = "right" width="450"/>
+<p align="center">
+  <img src = "https://media.discordapp.net/attachments/813407313541070891/814879016648572938/Screenshot_19.png?width=1077&height=676" width = "1000"/>
 <ul>
   <br><br>
   <li>First, when you start the game you will see the Main Menu</li>
@@ -37,7 +37,7 @@
  <br>
  <hr>
  <h1 align="center">Games' Menus</h1>
- <img src = "https://media.discordapp.net/attachments/722478446311112775/814904248508350524/gamesmenu.gif" align = "left" width = "450"> 
+ <img src = "https://media.discordapp.net/attachments/722478446311112775/814904248508350524/gamesmenu.gif" width = "1000"> 
 <p align = "right">
   <br>
   <ul>
