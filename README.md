@@ -21,33 +21,35 @@
 <img src = "https://media.discordapp.net/attachments/722478446311112775/814900898983313438/interfacefinal.png?width=960&height=131" align="center">  <hr>
 <h1 align="center">Main Menu</h1>
 <p align="left">
-  <img src = "https://media.discordapp.net/attachments/813407313541070891/814879016648572938/Screenshot_19.png?width=1077&height=676" align = "right" width="550"/>
+  <img src = "https://media.discordapp.net/attachments/813407313541070891/814879016648572938/Screenshot_19.png?width=1077&height=676" align = "right" width="450"/>
 <ul>
   <br><br>
   <li>First, when you start the game you will see the Main Menu</li>
-   <li>Then you can choose between three options.</li>
-  <ol>
+  <li>Then you can choose between three options.</li>
+</ul>
+ <ol>
     <i><li>When you choose the first option, you will go to the menu of the first game "Guess The Word"</li></i>
     <i><li>When you choose the second option, you will go to the menu of the second game "Hangman"</li></i>
     <i><li>When you choose the third option, you will just quit the menu</li></i>
   </ol>
-</ul>
 </p>
+ <br><br><br><br>
  <hr>
  <h1 align="center">Games' Menus</h1>
- <img src = "https://media.discordapp.net/attachments/722478446311112775/814904248508350524/gamesmenu.gif" align = "left" width = "600"> 
+ <img src = "https://media.discordapp.net/attachments/722478446311112775/814904248508350524/gamesmenu.gif" align = "left" width = "450"> 
 <p align = "right">
   <br>
   <ul>
     <li>When you have chosen one of the two games, you will see its menu</li>
     <li>Then you can choose between three options again.</li>
-      <ol>
+  </ul>
+  <ol>
         <i><li>When you choose the first option, you will go to play the chosen game</li></i>
         <i><li>When you choose the second option, you will go to rules of the chosen game</li></i>
         <i><li>When you choose the third option, you will return to the Main Menu</li></i>
-    </ol>
-  </ul>
+  </ol>
 <p>
+ <br><br><br>
   <hr>
  <h1 align="center">Hangman Structure</h1>
  <img src = "https://media.discordapp.net/attachments/722478446311112775/814877712710762536/hangman.gif" align = "right" width = "300"> 
