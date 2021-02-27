@@ -20,34 +20,73 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hangManStructure.h">
+    <ClInclude Include="checkGuessTheWord.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="randomize.h">
+    <ClInclude Include="displayGuessTheWordLetters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hangManGame.h">
+    <ClInclude Include="extractLetters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="newGame.h">
+    <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="menuAndOptions.h">
+    <ClInclude Include="gameOver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hangmanMenuAndOptions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="playerGameChoice.h">
+    <ClInclude Include="guessTheWord.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="guessTheWordMenuAndOptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Win.h">
+    <ClInclude Include="guessTheWordRules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gameOver.h">
+    <ClInclude Include="hangmanGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangmanMenuAndOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangmanRules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangmanSign.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hangmanStructure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menuAndOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playerGameChoice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="randomGive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="randomize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rulesSign.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="winMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="guessTheWordSign.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inGameMenuForGuessTheWord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inGameMenuForHangman.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="leaveMenuForGuessTheWord.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

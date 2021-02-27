@@ -4,4 +4,5 @@
 #include <string>
 using namespace std;
 
-string randomize(string words[]);
+
+string extractLetters(string str);

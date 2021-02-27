@@ -142,16 +142,29 @@
     <ClCompile Include="String-Game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="checkGuessTheWord.h" />
+    <ClInclude Include="displayGuessTheWordLetters.h" />
+    <ClInclude Include="extractLetters.h" />
+    <ClInclude Include="game.h" />
     <ClInclude Include="gameOver.h" />
+    <ClInclude Include="guessTheWord.h" />
     <ClInclude Include="guessTheWordMenuAndOptions.h" />
-    <ClInclude Include="hangManGame.h" />
+    <ClInclude Include="guessTheWordRules.h" />
+    <ClInclude Include="guessTheWordSign.h" />
+    <ClInclude Include="hangmanGame.h" />
     <ClInclude Include="hangmanMenuAndOptions.h" />
-    <ClInclude Include="hangManStructure.h" />
+    <ClInclude Include="hangmanRules.h" />
+    <ClInclude Include="hangmanSign.h" />
+    <ClInclude Include="hangmanStructure.h" />
+    <ClInclude Include="inGameMenuForGuessTheWord.h" />
+    <ClInclude Include="inGameMenuForHangman.h" />
+    <ClInclude Include="leaveMenuForGuessTheWord.h" />
     <ClInclude Include="menuAndOptions.h" />
-    <ClInclude Include="newGame.h" />
     <ClInclude Include="playerGameChoice.h" />
+    <ClInclude Include="randomGive.h" />
     <ClInclude Include="randomize.h" />
-    <ClInclude Include="Win.h" />
+    <ClInclude Include="rulesSign.h" />
+    <ClInclude Include="winMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

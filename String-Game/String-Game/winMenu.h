@@ -3,4 +3,4 @@
 
 
 
-void gameOver();
+void winMenu();
