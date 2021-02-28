@@ -3,4 +3,4 @@
 
 
 
-void winMenu();
+void winMenuGuessTheWord();
