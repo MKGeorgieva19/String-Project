@@ -15,6 +15,7 @@
 #include "guessTheWordRules.h"
 #include "guessTheWordSign.h"
 #include "hangmanGame.h"
+#include "hangmanLost.h"
 #include "hangmanMenuAndOptions.h"
 #include "hangmanRules.h"
 #include "hangmanSign.h"
@@ -27,12 +28,12 @@
 #include "randomGive.h"
 #include "randomize.h"
 #include "rulesSign.h"
-#include "winMenu.h"
+#include "winMenuGuessTheWord.h"
+#include "winMenuHangman.h"
+
 
 using namespace std;
 
-void winMenuHangman();
-void hangmanLost(char choice);
 
 //Function that checks if the player wants to play again or to return to the menu
 void checkGuessTheWord(string value)
@@ -161,7 +162,7 @@ void gameOver()
 //"Guess the word" game
 void guessTheWord()
 {
-    string wordBank[] = { "apple", "juice", "banana", "bottle", "hard", "table", "chair", "close", "fox", "person" };
+    string wordBank[] = { "apple", "juice", "banana", "bottle", "calculator", "table", "chair", "monitor", "fox", "person" };
     string word1, word2, word3, word4, word5;
     string placer1, placer2, placer3, placer4, placer5;
 
