@@ -34,7 +34,6 @@
 
 using namespace std;
 
-
 //Function that checks if the player wants to play again or to return to the menu
 void checkGuessTheWord(string value)
 {
@@ -162,7 +161,14 @@ void gameOver()
 //"Guess the word" game
 void guessTheWord()
 {
-    string wordBank[] = { "apple", "juice", "banana", "bottle", "calculator", "table", "chair", "monitor", "fox", "person" };
+    string wordBank[] = { "apple", "juice", "banana", "bottle", "ring",
+                          "table", "chair", "hair", "fox", "person", "animal",
+                          "desk", "teacher", "school", "rubber", "ruler","word",
+                          "wallet","purse","book","forest","beach","water",
+                          "paper","orange","peach","berry","blue","cherry",
+                          "game","programmer","zebra","yellow","purple","black","kitchen",
+                          "rule","house","grass","cloud","computer","mobile","team",
+                          "project","biology","titan","physics","milk","history","leaf" };
     string word1, word2, word3, word4, word5;
     string placer1, placer2, placer3, placer4, placer5;
 
@@ -463,7 +469,12 @@ void hangmanGame()
     inGameMenuForHangman();
     cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 
-    string wordBank[] = { "apple", "juice", "banana", "bottle", "hard", "table", "chair", "close", "fox", "person" };
+    string wordBank[] = { "pineapple", "juice", "banana", "bottle", "calculator", "table", "chair", "monitor",
+                          "person", "animal", "milkshake", "teacher", "school", "rubber", "ruler","magazine","wallet",
+                          "purse","environment","forest","beach","water","paper","orange","notebook","strawberry",
+                          "blueberry","cherry","wardrobe","programmer","zebra","yellow","purple","black","kitchen",
+                          "bathroom","house","grass","cloud","computer","mobile","mousepad","project","biology","newspaper",
+                          "physics","chemistry","history","geography", "politician" };
     string word = randomize(wordBank), holder = word;
     char playerChoice;
     size_t flag = 0;
@@ -553,24 +564,25 @@ void hangmanGame()
             cout << "S O R R Y, Y O U  L O S E !  T H E  W O R D  W A S  " << sumWord << endl;
             cout << "P R E S S  1  T O  S H O W  T H E  D I A L O G  B O X" << endl;
 
-
             cin >> choice;
             hangmanLost(choice);
         }
+        break;
     }
 }
 
+//Function that assures the lost game of hangman
 void hangmanLost(char choice)
 {
-    cin >> choice;
-
     if (choice == '1')
     {
         gameOver();
     }
     else
     {
-        cout << "I N V A L I D  I N P U T.  P L E A S E  T R Y  A G A I N !";
+        cout << "I N V A L I D  I N P U T.  P L E A S E  T R Y  A G A I N !  ";
+        cin >> choice;
+
         hangmanLost(choice);
     }
 }
@@ -992,26 +1004,26 @@ void randomGive(string* word1, string* word2, string* word3, string* word4, stri
     srand(time(NULL));
 
     int index1, index2, index3, index4, index5;
-    index1 = rand() % 10;
+    index1 = rand() % 50;
 
     while (true)
     {
-        index2 = rand() % 10;
+        index2 = rand() % 50;
         if (index2 != index1) break;
     }
     while (true)
     {
-        index3 = rand() % 10;
+        index3 = rand() % 50;
         if (index3 != index1 && index3 != index2) break;
     }
     while (true)
     {
-        index4 = rand() % 10;
+        index4 = rand() % 50;
         if (index4 != index1 && index4 != index2 && index4 != index3) break;
     }
     while (true)
     {
-        index5 = rand() % 10;
+        index5 = rand() % 50;
         if (index5 != index1 && index5 != index2 && index5 != index3 && index5 != index4) break;
     }
 
@@ -1027,7 +1039,7 @@ string randomize(string words[])
 {
     srand(time(NULL));
 
-    return words[rand() % 4];
+    return words[rand() % 50];
 }
 
 //Rules title
@@ -1042,6 +1054,8 @@ void rulesSign()
     cout << setw(132) << " ///       ///    //////////////   //////////   //////////   //////////       \n";
 }
 
+
+//Function that appears after a win of hangman
 void winMenuHangman()
 {
     cout << "\n\n\n\n\n";
