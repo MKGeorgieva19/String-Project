@@ -191,7 +191,7 @@ void guessTheWord()
     string correct4 = extractLetters(word4);
     string correct5 = extractLetters(word5);
 
-
+    //Displaying the blank spaces and the letters
     displayGuessTheWordLetters(word1, correct1);
     cout << endl << endl;
 
@@ -504,9 +504,9 @@ void hangmanGame()
             inGameMenuForHangman();
             cout << "\n\n\n\n";
 
+            //Replacing the blanks with the letter
             for (size_t i = 1; i < word.size() - 1; i++)
             {
-
                 if (word[i] == playerChoice && holder[i] == '_')
                 {
                     holder[i] = word[i];
@@ -984,7 +984,7 @@ void playerGameChoice(int gameChoice)
     else if (gameChoice == 3) 
     {
         system("cls");
-        system("exit");
+        system("pause");
     }
     else 
     {
@@ -1005,7 +1005,8 @@ void randomGive(string* word1, string* word2, string* word3, string* word4, stri
 
     int index1, index2, index3, index4, index5;
     index1 = rand() % 50;
-
+    
+    //Gives random index for every word
     while (true)
     {
         index2 = rand() % 50;
