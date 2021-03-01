@@ -15,6 +15,7 @@
 #include "guessTheWordRules.h"
 #include "guessTheWordSign.h"
 #include "hangmanGame.h"
+#include "hangmanLost.h"
 #include "hangmanMenuAndOptions.h"
 #include "hangmanRules.h"
 #include "hangmanSign.h"
@@ -27,7 +28,9 @@
 #include "randomGive.h"
 #include "randomize.h"
 #include "rulesSign.h"
-#include "winMenu.h"
+#include "winMenuGuessTheWord.h"
+#include "winMenuHangman.h"
+
 
 using namespace std;
 
@@ -52,6 +55,7 @@ void checkGuessTheWord(string value)
 void displayGuessTheWordLetters(string word, string correct)
 {
     cout << "\t\t\t\t\t\t\t\t\t\t\t";
+    //Displaying the words
     for (size_t i = 0; i < word.size(); i++) cout << "_ ";
     for (size_t i = 0; i < 20 - (word.size()) * 2; i++) cout << " ";
     for (size_t i = 0; i < word.size(); i++) cout << correct[i] << " ";
@@ -63,6 +67,7 @@ string extractLetters(string str)
     int index, temp;
     string holder = str;
 
+    //Swaps random letters
     for (size_t i = 0; i < str.size(); i++)
     {
         index = rand() % str.size();
@@ -72,6 +77,7 @@ string extractLetters(string str)
         str[index] = temp;
     }
 
+    //If the letters has not mixed
     while (holder == str) extractLetters(str);
 
     return str;
@@ -155,7 +161,14 @@ void gameOver()
 //"Guess the word" game
 void guessTheWord()
 {
-    string wordBank[] = { "apple", "juice", "banana", "bottle", "hard", "table", "chair", "close", "fox", "person" };
+    string wordBank[] = { "apple", "juice", "banana", "bottle", "ring",
+                          "table", "chair", "hair", "fox", "person", "animal",
+                          "desk", "teacher", "school", "rubber", "ruler","word",
+                          "wallet","purse","book","forest","beach","water",
+                          "paper","orange","peach","berry","blue","cherry",
+                          "game","programmer","zebra","yellow","purple","black","kitchen",
+                          "rule","house","grass","cloud","computer","mobile","team",
+                          "project","biology","titan","physics","milk","history","leaf" };
     string word1, word2, word3, word4, word5;
     string placer1, placer2, placer3, placer4, placer5;
 
@@ -277,13 +290,20 @@ void guessTheWord()
             if (counter == 5)
             {
                 system("cls");
-                winMenu();
+                winMenuGuessTheWord();
+                break;
             }
 
             else
             {
+                int gameChoice;
+
                 system("cls");
                 menuAndOptions();
+                
+                cin >> gameChoice;
+                playerGameChoice(gameChoice);
+                break;
             }
 
             cin >> choice;
@@ -399,6 +419,7 @@ void guessTheWordRules()
     cout << setw(150) << "|()()()()()()()  |                                                                                |  ()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()  |                                                                                |  ()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()  |            6) Enjoy the game :)                                                |  ()()()()()()()|\n";
+    cout << setw(150) << "|()()()()()()()  |                                                                                |  ()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()  |________________________________________________________________________________|  ()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()|\n";
@@ -448,7 +469,12 @@ void hangmanGame()
     inGameMenuForHangman();
     cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 
-    string wordBank[] = { "apple", "juice", "banana", "bottle", "hard", "table", "chair", "close", "fox", "person" };
+    string wordBank[] = { "pineapple", "juice", "banana", "bottle", "calculator", "table", "chair", "monitor",
+                          "person", "animal", "milkshake", "teacher", "school", "rubber", "ruler","magazine","wallet",
+                          "purse","environment","forest","beach","water","paper","orange","notebook","strawberry",
+                          "blueberry","cherry","wardrobe","programmer","zebra","yellow","purple","black","kitchen",
+                          "bathroom","house","grass","cloud","computer","mobile","mousepad","project","biology","newspaper",
+                          "physics","chemistry","history","geography", "politician" };
     string word = randomize(wordBank), holder = word;
     char playerChoice;
     size_t flag = 0;
@@ -519,11 +545,13 @@ void hangmanGame()
         if (mistake < 9)
         {
             system("cls");
-            winMenu();
+            winMenuHangman();
+
+            break;
         }
         else
         {
-            int choice;
+            char choice;
             string sumWord;
 
             for (size_t i = 0; i < word.size(); i++)
@@ -537,14 +565,25 @@ void hangmanGame()
             cout << "P R E S S  1  T O  S H O W  T H E  D I A L O G  B O X" << endl;
 
             cin >> choice;
-
-            if (choice == 1)
-            {
-                gameOver();
-                break;
-            }
-            else cout << "I N V A L I D  I N P U T.  P L E A S E  T R Y  A G A I N !";
+            hangmanLost(choice);
         }
+        break;
+    }
+}
+
+//Function that assures the lost game of hangman
+void hangmanLost(char choice)
+{
+    if (choice == '1')
+    {
+        gameOver();
+    }
+    else
+    {
+        cout << "I N V A L I D  I N P U T.  P L E A S E  T R Y  A G A I N !  ";
+        cin >> choice;
+
+        hangmanLost(choice);
     }
 }
 
@@ -658,6 +697,7 @@ void hangmanRules()
     cout << setw(150) << "|()()()()()()()  |                                                                                |  ()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()  |                                                                                |  ()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()  |            7) Enjoy the game :)                                                |  ()()()()()()()|\n";
+    cout << setw(150) << "|()()()()()()()  |                                                                                |  ()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()  |________________________________________________________________________________|  ()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()|\n";
     cout << setw(150) << "|()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()|\n";
@@ -706,6 +746,7 @@ void hangmanStructure(int counter)
 
     hangmanSign();
     cout << "\n\n\n\n\n\n\n";
+
     inGameMenuForHangman();
     cout << "\n\n\n\n\n";
 
@@ -842,7 +883,6 @@ void inGameMenuForGuessTheWord()
     cout << "\t\t\t\t\t\t" << "       |   *       *       *       *       *       *       *       *       *       *       *       *       *   | \n";
     cout << "\t\t\t\t\t\t" << "       |_______________________________________________________________________________________________________| \n";
     cout << "\n\n\n\n\n";
-
 }
 
 //"In game" sign for the "Hangman" game
@@ -941,7 +981,20 @@ void playerGameChoice(int gameChoice)
         system("cls");
         hangmanMenuAndOptions();
     }
-    else if (gameChoice == 3) cout << " ";
+    else if (gameChoice == 3) 
+    {
+        system("cls");
+        system("exit");
+    }
+    else 
+    {
+        int gameChoice;
+
+        cout << "Invalid move. Please try again: ";
+        cin >> gameChoice;
+
+        playerGameChoice(gameChoice);
+    }
 }
 
 //Function that randomizes the letters in the "Guess the word" game
@@ -951,26 +1004,26 @@ void randomGive(string* word1, string* word2, string* word3, string* word4, stri
     srand(time(NULL));
 
     int index1, index2, index3, index4, index5;
-    index1 = rand() % 10;
+    index1 = rand() % 50;
 
     while (true)
     {
-        index2 = rand() % 10;
+        index2 = rand() % 50;
         if (index2 != index1) break;
     }
     while (true)
     {
-        index3 = rand() % 10;
+        index3 = rand() % 50;
         if (index3 != index1 && index3 != index2) break;
     }
     while (true)
     {
-        index4 = rand() % 10;
+        index4 = rand() % 50;
         if (index4 != index1 && index4 != index2 && index4 != index3) break;
     }
     while (true)
     {
-        index5 = rand() % 10;
+        index5 = rand() % 50;
         if (index5 != index1 && index5 != index2 && index5 != index3 && index5 != index4) break;
     }
 
@@ -986,7 +1039,7 @@ string randomize(string words[])
 {
     srand(time(NULL));
 
-    return words[rand() % 4];
+    return words[rand() % 50];
 }
 
 //Rules title
@@ -1001,8 +1054,9 @@ void rulesSign()
     cout << setw(132) << " ///       ///    //////////////   //////////   //////////   //////////       \n";
 }
 
-//Function that displayes "You win" and ask us what we want to do next
-void winMenu()
+
+//Function that appears after a win of hangman
+void winMenuHangman()
 {
     cout << "\n\n\n\n\n";
     cout << "\t\t\t\t\t" << "                    ///      ///  /////////////  ///       ///          ///           ///  ////  //////     ///    \n";
@@ -1052,6 +1106,69 @@ void winMenu()
     system("cls");
 
     if (answer == '1') hangmanGame();
+    else if (answer == '2')
+    {
+        int gameChoice;
+
+        system("cls");
+        menuAndOptions();
+
+        cin >> gameChoice;
+        playerGameChoice(gameChoice);
+    }
+}
+
+//Function that displayes "You win" and ask us what we want to do next
+void winMenuGuessTheWord()
+{
+    cout << "\n\n\n\n\n";
+    cout << "\t\t\t\t\t" << "                    ///      ///  /////////////  ///       ///          ///           ///  ////  //////     ///    \n";
+    cout << "\t\t\t\t\t" << "                   ///      ///  ///       ///  ///       ///          ///           ///  ////  /// ///    ///     \n";
+    cout << "\t\t\t\t\t" << "                  ///      ///  ///       ///  ///       ///          ///           ///  ////  ///  ///   ///      \n";
+    cout << "\t\t\t\t\t" << "                 ////////////  ///       ///  ///       ///          ///   ////    ///  ////  ///   ///  ///       \n";
+    cout << "\t\t\t\t\t" << "                         ///  ///       ///  ///       ///          /// ///   /// ///  ////  ///    /// ///        \n";
+    cout << "\t\t\t\t\t" << "                        ///  ///       ///  ///       ///          //////     //////  ////  ///     //////         \n";
+    cout << "\t\t\t\t\t" << "                //////////  /////////////  /////////////          /////       /////  ////  ///      /////      \n\n\n";
+
+    cout << "\t\t\t\t\t" << "     _______________________________________________________________________________________________________________\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++   _____________________________________________________   ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |                                                     |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |      W O U L D  Y O U  L I K E  T O  P L A Y        |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |             A N O T H E R  G A M E  ?               |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |                                                     |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |                                                     |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |            (1) P L A Y   A G A I N                  |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |                                                     |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |                                                     |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |            (2) R E T U R N  T O  T H E  M E N U     |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |                                                     |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |                                                     |  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++  |_____________________________________________________|  ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |++++++++++++++++++++++++++                                                           ++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|\n";
+    cout << "\t\t\t\t\t" << "    |_______________________________________________________________________________________________________________|\n";
+
+    char answer;
+    cin >> answer;
+
+    system("cls");
+
+    if (answer == '1') guessTheWord();
     else if (answer == '2')
     {
         int gameChoice;
